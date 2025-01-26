@@ -87,6 +87,7 @@ export default function HomePage() {
   )
 
   function onSubmit(data: CharacterFormValues) {
+    if (!data.character) return
     const config = getHanziWriterConfig()
     drawCharacter(config)
   }

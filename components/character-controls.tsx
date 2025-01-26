@@ -11,7 +11,7 @@ type CharacterControlsProps = {
   isLoading?: boolean
 }
 
-export function CharacterControls({ writer, onRedraw, isLoading }: CharacterControlsProps) {
+export function CharacterControls({ onRedraw, isLoading }: CharacterControlsProps) {
   return (
     <div className="flex gap-2">
       <Button

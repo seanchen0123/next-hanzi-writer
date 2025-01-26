@@ -8,6 +8,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ char
     const characterData = await import(`hanzi-writer-data/${character}.json`)
     return NextResponse.json(characterData.default)
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ error: `Failed to load data for character ${character}` }, { status: 404 })
   }
 }
